@@ -1,6 +1,11 @@
 def reverse(x):
-    # Implement this placeholder.
-    return 0
+    result = 0
+    remaining_x = abs(x)
+    while remaining_x:
+        result = result * 10 + remaining_x % 10
+        remaining_x //= 10
+
+    return -result if x < 0 else result
 
 
 from test_framework import test_utils_generic_main, test_utils
