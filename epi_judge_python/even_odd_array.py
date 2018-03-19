@@ -5,14 +5,16 @@ from test_framework.test_utils import enable_timer_hook
 
 
 def even_odd(A):
-    next_even = 0
-    next_odd = len(A) - 1
-    while next_even < next_odd:
-        if A[next_even] % 2 == 0:
-            next_even += 1
+    i = 0
+    length = len(A) - 1
+    while i < length:
+        if A[i] % 2 == 0:
+            i += 1
         else:
-            A[next_even], A[next_odd] = A[next_odd], A[next_even]
-            next_odd -= 1
+            A[i], A[length] = A[length], A[i]
+            length -= 1
+
+
 
 
 
