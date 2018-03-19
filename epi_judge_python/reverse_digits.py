@@ -7,7 +7,6 @@ def reverse(x):
 
     return -result if x < 0 else result
 
-
 from test_framework import test_utils_generic_main, test_utils
 
 if __name__ == '__main__':
