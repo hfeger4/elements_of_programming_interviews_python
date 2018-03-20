@@ -1,6 +1,13 @@
 def buy_and_sell_stock_once(prices):
-    # Implement this placeholder.
-    return 0.0
+    min_price = float('inf')
+    max_profit = 0.0
+
+    for price in prices:
+        min_price = min(price, min_price)
+        max_profit_today = price - min_price
+        max_profit = max(max_profit, max_profit_today)
+
+    return max_profit
 
 
 from test_framework import test_utils_generic_main, test_utils
