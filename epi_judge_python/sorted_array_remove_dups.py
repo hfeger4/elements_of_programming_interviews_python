@@ -1,7 +1,13 @@
 # Returns the number of valid entries after deletion.
 def delete_duplicates(A):
-    # Implement this placeholder.
-    return 0
+    if not A:
+        return 0
+    write_index = 1
+    for i in range(1, len(A)):
+        if A[write_index - 1] != A[i]:
+            A[write_index] = A[i]
+            write_index += 1
+    return write_index
 
 
 def delete_duplicates_wrapper(A):
