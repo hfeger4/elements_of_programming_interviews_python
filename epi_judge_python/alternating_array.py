@@ -3,8 +3,10 @@ from test_framework.test_utils import enable_timer_hook
 
 
 def rearrange(A):
-    # Implement this placeholder.
-    return
+    A = sorted(A)
+    for i in range(0, len(A), 2):
+        A[i], A[i-1] = A[i-1], A[i]
+    return A
 
 
 @enable_timer_hook
