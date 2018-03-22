@@ -1,6 +1,5 @@
 def is_palindrome(s):
-    # Implement this placeholder.
-    return True
+
 
 
 from test_framework import test_utils_generic_main, test_utils

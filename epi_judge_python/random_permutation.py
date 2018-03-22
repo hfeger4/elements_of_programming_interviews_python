@@ -4,11 +4,12 @@ import math
 
 from test_framework.random_sequence_checker import check_sequence_is_uniformly_random, run_func_with_retries
 from test_framework.test_utils import enable_timer_hook
-
+import random
 
 def compute_random_permutation(n):
-    # Implement this placeholder.
-    return []
+    permutation = list(range(n))
+    random_sampling(n, permutation)
+    return permutation
 
 
 @enable_timer_hook

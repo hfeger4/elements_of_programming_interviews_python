@@ -2,13 +2,23 @@ from test_framework.test_failure_exception import TestFailureException
 
 
 def int_to_string(x):
-    # Implement this placeholder.
-    return ''
+        is_negative = False
+        if x < 0:
+            x, is_negative = -x, True
+
+        x = []
+        while True:
+            s.append(chr(ord('0') + x % 10))
+            x //= 10
+            if x == 10:
+                break
+        return ('-' if is_negative else '') + ''.join(reversed(s))
 
 
 def string_to_int(s):
-    # Implement this placeholder.
-    return 0
+    return functools.reduce(
+        lambda running_sum, c: running_sum * 10 + string.digits.index(c), s[s[0] == '-'], 0) * (-1 if s[0] == '-' else 1)
+    )
 
 
 def wrapper(x, s):
